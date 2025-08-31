@@ -1,0 +1,44 @@
+@media (max-width: 900px) {
+	.game .game-sentence .game-sentence-box {
+		width: 3rem;
+		height: 3rem;
+		font-size: 2rem;
+	}
+
+	.game .game-letters .game-letter {
+		width: 3rem;
+		height: 3rem;
+		font-size: 1.5rem;
+	}
+
+	.game .game-attempts {
+		font-size: 1.3rem;
+		width: 3rem;
+		height: 3rem;
+	}
+
+	button.button {
+		padding: 1rem 2rem;
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 550px) {
+	.game .game-sentence .game-sentence-box {
+		width: 2.5rem;
+		height: 2.5rem;
+		font-size: 1.8rem;
+	}
+
+	.game .game-letters .game-letter {
+		width: 2.5rem;
+		height: 2.5rem;
+		font-size: 1.3rem;
+	}
+
+	.game .game-attempts {
+		font-size: 1.1rem;
+		width: 2.7rem;
+		height: 2.7rem;
+	}
+}
