@@ -112,19 +112,26 @@ class Game {
 			this.currentSentenceLetters = this.currentSentenceLetters.replace(new RegExp(letter, 'g'), '');
 
 			if (!this.isLetterExist()) {
+				this.elemAttempts.classList.remove('alert-red', 'alert-orange');
+				this.attempts = 7;
+				this.showAttempts();
 				this.gameComplete();
 			}
 		} else {
 			this.attempts--;
 			this.showAttempts();
 
-			if (this.attempts <= 5) {
-				this.elemAttempts.classList.add('alert');
+			if (this.attempts <= 3) {
+				this.elemAttempts.classList.add('alert-red');
+			} else if (this.attempts <= 5) {
+				this.elemAttempts.classList.add('alert-orange');
 			}
 
 			if (this.attempts <= 0) {
+				this.elemAttempts.classList.remove('alert-red', 'alert-orange');
+				this.attempts = 7;
+				this.showAttempts();
 				this.gameOver();
-				this.elemAttempts.classList.remove('alert');
 			}
 		}
 	}
@@ -183,6 +190,7 @@ class Game {
 	}
 
 	startGame() {
+		this.elemAttempts.classList.remove('alert-red', 'alert-orange');
 		this.attempts = 7;
 		this.randomSentence();
 		this.showAttempts();
@@ -202,13 +210,14 @@ class Game {
 		});
 
 		this.elemSentence.innerHTML = `
-    	<div class="game-over-message">
+    	<div class="game-over-message ">
      		 Niestety nie udało ci się odgadnąć hasła 😢<br>
-     	 	<strong>${this.currentSentence}</strong>
+     	 	<strong  class="red" >${this.currentSentence}</strong>
    		 </div>
   		`;
 
 		gameOverAnim();
+
 		this.disableLetters();
 	}
 
@@ -222,13 +231,14 @@ class Game {
 		});
 
 		this.elemSentence.innerHTML = `
-    	<div class="game-win-message">
+    	<div class="game-over-message ">
       		🎉 Udało ci się zgadnąć hasło! 🎉 <br>
-       		 <strong>${this.currentSentence}</strong>
+       		 <strong class="green" >${this.currentSentence}</strong>
     	</div>
 		 `;
 
 		gameCompleteAnim();
+
 		this.disableLetters();
 	}
 }

@@ -20,10 +20,15 @@
 		color: #e6e6e6;
 		border: 1px solid #e7e7e7;
 
-		&.alert {
-			border-color: rgb(255, 15, 15);
+		&.alert-orange {
+			background-color: #ff7b2e;
+			box-shadow: 0 0 10 rgb(255, 148, 49);
+			animation: pulse 1s linear infinite;
+		}
+
+		&.alert-red {
 			background-color: #ff2727;
-			box-shadow: 0 0 10px rgba(100, 0, 0, 0.541);
+			box-shadow: 0 0 10 rgb(255, 62, 55);
 			animation: pulse 1s linear infinite;
 		}
 	}
@@ -38,7 +43,6 @@
 		justify-content: center;
 		flex-wrap: wrap;
 
-		.game-win-message,
 		.game-over-message {
 			color: #bdbdbd;
 			font-size: 2rem;
@@ -51,6 +55,14 @@
 				border: 1px solid #414141;
 				border-radius: 4px;
 				margin-top: 1rem;
+				
+				&.green {
+					border-color: rgb(82, 255, 82);
+				}
+
+				&.red {
+					border-color: #ff2727;
+				}
 			}
 		}
 		.game-sentence-box {
@@ -85,6 +97,7 @@
 		user-select: none;
 		pointer-events: none;
 		max-height: 200px;
+		text-align: center;
 
 		&.hide {
 			display: none;

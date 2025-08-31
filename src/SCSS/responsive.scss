@@ -1,44 +1,44 @@
-@media (max-width: 900px) {
-	.game .game-sentence .game-sentence-box {
-		width: 3rem;
-		height: 3rem;
-		font-size: 2rem;
-	}
+@media (max-width: 980px) {
+	.game {
+		.game-sentence .game-sentence-box {
+			width: 2.1rem;
+			height: 2.1rem;
+			font-size: 1.5rem;
+			margin: 0.75rem 0.35rem;
+		}
+		.game-tip {
+			font-size: 1.1rem;
+			margin: 0.65rem;
+			padding: 0.65rem;
+		}
 
-	.game .game-letters .game-letter {
-		width: 3rem;
-		height: 3rem;
-		font-size: 1.5rem;
-	}
+		.game-letters .game-letter {
+			width: 2.2rem;
+			height: 2.2rem;
+			font-size: 1.1rem;
+		}
 
-	.game .game-attempts {
-		font-size: 1.3rem;
-		width: 3rem;
-		height: 3rem;
-	}
+		.game-attempts {
+			font-size: 1.1rem;
+			width: 2.7rem;
+			height: 2.7rem;
+			margin: 0.75rem 0;
+		}
 
-	button.button {
-		padding: 1rem 2rem;
-		font-size: 1rem;
-	}
-}
+		.game-sentence .game-win-message {
+			font-size: 1.1rem;
 
-@media (max-width: 550px) {
-	.game .game-sentence .game-sentence-box {
-		width: 2.5rem;
-		height: 2.5rem;
-		font-size: 1.8rem;
-	}
+			strong {
+				padding: 0.75rem;
+				margin-top: 0.75rem;
+				font-size: 1.2rem;
+			}
+		}
 
-	.game .game-letters .game-letter {
-		width: 2.5rem;
-		height: 2.5rem;
-		font-size: 1.3rem;
-	}
-
-	.game .game-attempts {
-		font-size: 1.1rem;
-		width: 2.7rem;
-		height: 2.7rem;
+		button.button {
+			padding: 1rem 2rem;
+			font-size: 1rem;
+			margin: 1rem auto;
+		}
 	}
 }
